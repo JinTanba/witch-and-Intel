@@ -1,0 +1,69 @@
+service: nlp-processor
+
+provider:
+  name: aws
+  runtime: python3.11
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+  memorySize: 512
+  timeout: 300
+
+functions:
+  nlpProcessor:
+    handler: src.lambda_handler.lambda_handler
+    description: NLP processing Lambda function
+    events:
+      - http:
+          path: nlp/process
+          method: post
+          cors: true
+    environment:
+      LOG_LEVEL: INFO
+  
+  nlpBatchProcessor:
+    handler: src.lambda_handler.batch_handler
+    description: Batch NLP processing Lambda function
+    events:
+      - http:
+          path: nlp/batch
+          method: post
+          cors: true
+    environment:
+      LOG_LEVEL: INFO
+  
+  textToCoordinates:
+    handler: src.infrastructure.lambda.lambda_handler.lambda_handler
+    description: Convert text to 2D coordinates using BERT and UMAP
+    events:
+      - http:
+          path: text/coordinates
+          method: post
+          cors: true
+    environment:
+      LOG_LEVEL: INFO
+      USE_REDIS_CACHE: ${env:USE_REDIS_CACHE, 'false'}
+      REDIS_HOST: ${env:REDIS_HOST, 'localhost'}
+      REDIS_PORT: ${env:REDIS_PORT, '6379'}
+      REDIS_DB: ${env:REDIS_DB, '0'}
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+    layer: true
+    slim: true
+    strip: false
+    
+package:
+  exclude:
+    - node_modules/**
+    - venv/**
+    - .venv/**
+    - __pycache__/**
+    - .pytest_cache/**
+    - tests/**
+    - local_test.py
+    - Makefile
+    - requirements-dev.txt

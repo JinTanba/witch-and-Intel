@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# Lambda packages
+lambda-package.zip
+deployment-package.zip
+*.zip
+.lambda_env/
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage
+.coverage
+htmlcov/
+*.cover
+.pytest_cache/
+
+# Environment variables
+.env
+.env.local
+
+# Lambda layers
+layers/python/lib/python*/site-packages/*
+!layers/python/lib/python*/site-packages/.gitkeep
+
+# Temporary files
+*.tmp
+*.bak
