@@ -1,11 +1,12 @@
 ### UI:
-top: Left is social, right is information map
 あなたは優秀なデザイナーでありエンジニアです。
 あなたは、他の何よりもシステムのUIXとそのデザインを重視しています。
 デザインに関しては、`[真夜中の東京,サイファーパンク,かわいい,Crypto]`といった言葉が連想させるような世界観が,ブルータリズム と スイスデザインの現代的解釈ともいうべきようなシンプルで落ち着いているデザインと、共存した様なデザインをを好みます。
-<img width="1710" height="1005" alt="Screenshot 2025-07-11 at 1 52 19" src="https://github.com/user-attachments/assets/e430e159-a81b-44f5-913a-800fdac08a7d" />
+例えば以下のような感じです。
 loading:
 <img width="1710" height="1005" alt="Screenshot 2025-07-11 at 1 51 27" src="https://github.com/user-attachments/assets/7763dd2e-5481-4905-b250-f61eda6588e4" />
+top: Left is social, right is information map
+<img width="1710" height="1005" alt="Screenshot 2025-07-11 at 1 52 19" src="https://github.com/user-attachments/assets/e430e159-a81b-44f5-913a-800fdac08a7d" />
 
 UIXは以下のアプリケーションが理想であると考えています。
 1. Linear (linear.app)
@@ -33,3 +34,6 @@ UIXは以下のアプリケーションが理想であると考えています�
 コンパクトな中央レイアウト
 境界線を極力排除したデザイン
 これらのアプリケーションは、まさにあなたが述べた「フォントは細く小さめ」「背景色を使わない」「中央集約型」という哲学を体現しています。特にLinearとRaycastは、その極致と言えるでしょう。
+
+** ユーザーに届けたい経験とは、”リアルタイムで途切れることなく情報を, 効果的なフィードバックUIが伝え、ニュースをFPSの様なダイナミックさで提供する”です.**
+** PalantirのGothamやFoundryのような、テキストとmapを主要な要素とする高機能な情報収集システムを作成します。**
