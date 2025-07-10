@@ -1,6 +1,6 @@
 hi CLAUDE:
 
-loading:
+loading: Left is social, right is information map
 <img width="1710" height="1005" alt="Screenshot 2025-07-11 at 1 52 19" src="https://github.com/user-attachments/assets/e430e159-a81b-44f5-913a-800fdac08a7d" />
 top:
 <img width="1710" height="1005" alt="Screenshot 2025-07-11 at 1 51 27" src="https://github.com/user-attachments/assets/7763dd2e-5481-4905-b250-f61eda6588e4" />
